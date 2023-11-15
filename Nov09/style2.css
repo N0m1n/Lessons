@@ -1,0 +1,140 @@
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation: round-box 8s linear infinite;
+}
+.box-delay-10ms {
+  animation: round-box 8s linear infinite 400ms;
+}
+.box-delay-20ms {
+  animation: round-box 8s linear infinite 600ms;
+}
+.box-delay-30ms {
+  animation: round-box 8s linear infinite 800ms;
+}
+.box-delay-40ms {
+  animation: round-box 2s linear infinite 1200ms;
+}
+.container {
+  margin-top: 50px;
+  width: 800px;
+  height: 400px;
+  border: 2px solid black;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.box {
+  background-color: white;
+  width: 50px;
+  height: 100px;
+  border-radius: 10px;
+  animation: beat 2s linear infinite;
+}
+
+.box1 {
+  background-color: white;
+  width: 50px;
+  height: 100px;
+  border-radius: 10px;
+  animation: beat 2s linear infinite 0.3s;
+}
+.box2 {
+  background-color: white;
+  width: 50px;
+  height: 100px;
+  border-radius: 10px;
+  animation: beat 2s linear infinite 0.6s;
+}
+.box3 {
+  background-color: white;
+  width: 50px;
+  height: 100px;
+  border-radius: 10px;
+  animation: beat 2s linear infinite 09s;
+}
+@keyframes beat {
+  0% {
+    width: 50px;
+    height: 100px;
+  }
+  50% {
+    width: 50px;
+    height: 150px;
+  }
+  100% {
+    width: 50px;
+    height: 100px;
+  }
+}
+.container3 {
+  margin-top: 50px;
+  width: 600px;
+  height: 600px;
+  border: 2px solid black;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.round {
+  width: 100px;
+  height: 100px;
+  background-color: aqua;
+  border-radius: 50%;
+  animation: loader 2s linear infinite;
+}
+@keyframes loader {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+.delay-1 {
+  animation-delay: 0.2s;
+}
+.delay-2 {
+  animation-delay: 0.4s;
+}
+/* .container2 { */
+/* margin-top: 50px;
+  width: 600px;
+  height: 300px;
+  border: 2px solid black;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; */
+/* } */
+.text1 {
+  /* height: 20px; */
+  overflow: hidden;
+  animation: change-color 10s infinite;
+}
+@keyframes change-color {
+  0% {
+    transform: translateY(0%);
+  }
+  25% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(-200%);
+  }
+  75% {
+    transform: translateY(-300%);
+  }
+  100% {
+    transform: translateY(-400%);
+  }
+}

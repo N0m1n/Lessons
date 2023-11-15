@@ -1,0 +1,27 @@
+.container {
+  overflow: hidden;
+}
+
+ul {
+  height: 18px;
+  animation: change-color 3s infinite;
+  margin: 0px;
+  padding: 0px;
+}
+@keyframes change-color {
+  0% {
+    transform: translateY(0%);
+  }
+  25% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(-200%);
+  }
+  75% {
+    transform: translateY(-300%);
+  }
+  100% {
+    transform: translateY(-400%);
+  }
+}

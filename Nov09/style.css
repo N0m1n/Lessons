@@ -1,0 +1,90 @@
+/* @keyframes first-animation {
+  from {
+    background-color: red;
+    width: 200px;
+    height: 200px;
+  }
+  to {
+    background-color: green;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+  }
+}
+.box {
+  animation-name: first-animation;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+} */
+/* @keyframes loader {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+/* .box { */
+/* width: 300px;
+  height: 300px; */
+/* border-radius: 50%; */
+/* border: 10px solid black; */
+/* border-bottom: transparent; */
+/* animation-name: loader;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite; */
+/* } */
+@keyframes round-box {
+  0% {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: red;
+  }
+  25% {
+    border-radius: 0%;
+    background-color: yellow;
+  }
+  50% {
+    border-radius: 50%;
+    background-color: red;
+  }
+  75% {
+    border-radius: 0%;
+    background-color: yellow;
+  }
+  100% {
+    border-radius: 50%;
+    background-color: red;
+  }
+}
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation: round-box 8s linear infinite;
+}
+.box-delay-10ms {
+  animation: round-box 8s linear infinite 400ms;
+}
+.box-delay-20ms {
+  animation: round-box 8s linear infinite 600ms;
+}
+.box-delay-30ms {
+  animation: round-box 8s linear infinite 800ms;
+}
+.box-delay-40ms {
+  animation: round-box 8s linear infinite 1200ms;
+}
+/* .box-delay-10ms {
+  animation-delay: 100ms;
+}
+.box-delay-20ms {
+  animation-delay: 200ms;
+}
+.box-delay-30ms {
+  animation-delay: 600ms;
+}
+.box-delay-40ms {
+  animation-delay: 800ms;
+} */

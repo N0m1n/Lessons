@@ -1,0 +1,35 @@
+
+.container {
+background-color:white;
+padding-top:  100px;
+padding-left: 100px;
+
+}
+
+.main-box {
+    justify-content: center;
+    border: 3px solid black;
+    height: 600px;
+    width: 300px;
+}
+
+.box1{
+    margin-top: 50px;
+    margin-left: 50px;
+    border-color: red green purple blue;
+    border-style: dashed;
+    border-width: 10px 8px 6px 4px;
+    height: 200px;
+    width: 200px;
+}
+
+.box2 {
+   margin-top: 50px;
+   margin-left: 50px;
+   border-style: solid;
+    border-color: yellow green purple blue;
+    border-width: 2px 2px 2px 2px;
+    border-radius: 50px 10px 50px 10px;
+    height: 200px;
+    width: 200px;
+}
