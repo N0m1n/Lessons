@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="container">
+    <div class="container-flex">
+      <div class="container-max-width">
         <div class="navbar">
           <div class="left">
             <img
@@ -83,77 +84,49 @@
               </div>
             </div>
           </div>
-          <div class="small-box-content">
-            <div class="news-link">
-              <a href="https://gogo.mn/r/7vdjy" class="news-item1">
-                <div class="small-content-img">
-                  <div class="small-contnet-transation">
-                    <img
-                      src="https://mgl.gogo.mn/newsn/thumbnail/600/images/c/2023/11/313038-20112023-1700446640-562705506-denjiin_maynga10-134903-2973593571.jpeg"
-                      alt=""
-                      class="small-content-img"
-                    />
-                    <div class="small-box-content-hover">
-                      <p class="read">Унших</p>
-                    </div>
-                  </div>
-                  <div class="small-content-text">
+          <div class="smallbox-news-container">
+            <ul class="smallbox-news-grid">
+              <li class="smallbox-news-list">
+                <a href="https://gogo.mn/r/7vdjy" class="smallbox-news-link">
+                  <img src="https://mgl.gogo.mn/newsn/thumbnail/600/images/c/2023/11/313038-20112023-1700446640-562705506-denjiin_maynga10-134903-2973593571.jpeg" alt="" class="smallbox-img">
+                  <div class="smallbox-news-text">
                     СУРВАЛЖИЛГА: Мах авахдаа гарал үүслийн гэрчилгээг нь шалгаж
                     дадвал антибиотикийн даслаас сэргийлэх боломжтой
                   </div>
-                  <div class="reaction"></div>
-                </div>
-              </a>
-            </div>
-            <div class="news-link">
-              <a href="https://gogo.mn/r/0j6ly" class="news-item1">
-                <div class="small-contnet-img">
-                  <div class="small-contnet-transation">
-                    <img
-                      src="https://mgl.gogo.mn/newsn/thumbnail/600/images/c/2023/11/313028-20112023-1700422041-343556142-%D1%85%D0%B8%D0%BB.jpeg"
-                      alt=""
-                      class="small-content-img"
-                    />
-                    <div class="small-box-content-hover">
-                      <p class="read">Унших</p>
-                    </div>
-                  </div>
-                  <div class="small-content-text">
-                    <div
-                      class="margin-top-10 text-14 home-second-highlight-title"
-                    >
-                      Игорь: Америк хүрэх зам амар байгаагүй
-                    </div>
+                  <div class="small-box-content-hover">
+                    <p class="read">Унших</p>
                   </div>
                   <div class="reaction"></div>
-                </div>
-              </a>
-            </div>
-            <div class="news-link">
-              <a href="https://gogo.mn/r/0j6ly" class="news-item1">
-                <div class="small-content-img">
-                  <div class="small-contnet-transation">
-                    <img
-                      src="https://mgl.gogo.mn/newsn/thumbnail/600/images/c/2023/11/-20112023-1700443963-380859083-600x1250.jpg"
-                      alt=""
-                      class="small-content-img"
-                    />
-                    <div class="small-box-content-hover">
-                      <p class="read">Унших</p>
-                    </div>
+                </a>
+              </li>
+              <li class="smallbox-news-list">
+                <a href="https://gogo.mn/r/7vdjy" class="smallbox-news-link">
+                  <img src="https://mgl.gogo.mn/newsn/thumbnail/600/images/c/2023/11/313028-20112023-1700422041-343556142-%D1%85%D0%B8%D0%BB.jpeg" alt="" class="smallbox-img">
+                  <div class="smallbox-news-text">
+                    Игорь: Америк хүрэх зам амар байгаагүй
                   </div>
-                  <div class="small-content-text">
-                    <div
-                      class="margin-top-10 text-14 home-second-highlight-title"
-                    >
-                      Таны нэгж, дата авсан мөнгө юунд зарцуулагддаг вэ?
-                    </div>
+                  <div class="small-box-content-hover">
+                    <p class="read">Унших</p>
                   </div>
                   <div class="reaction"></div>
-                </div>
-              </a>
-            </div>
-            <div class="highlight-banner"></div>
+                </a>
+              </li>
+              <li class="smallbox-news-list">
+                <a href="https://gogo.mn/r/7vdjy" class="smallbox-news-link">
+                  <img src="https://mgl.gogo.mn/newsn/thumbnail/600/images/c/2023/11/-20112023-1700443963-380859083-600x1250.jpg" alt="" class="smallbox-img">
+                  <div class="smallbox-news-text">
+                    Таны нэгж, дата авсан мөнгө юунд зарцуулагддаг вэ?
+                  </div>
+                  <div class="small-box-content-hover">
+                    <p class="read">Унших</p>
+                  </div>
+                  <div class="reaction"></div>
+                </a>
+              </li>
+             
+              <li class="smallbox-banner">
+              </li>
+            </ul>
           </div>
         <div class="story-container">
             <div class="story-section-header">
@@ -281,8 +254,9 @@
                 <ul class="column1-text-list">
                     <li class="column1-content">    
                         <div class="column1-content-imgbox">
+                        
                           <img src="https://mgl.gogo.mn/newsn/thumbnail/1000/images/c/2023/11/313110-21112023-1700561453-1002113547-burhan.jpg" alt="" class="column1-content-pic">
-                  
+      
                         </div>
                         <div class="column1-content-text-title">
                           <h3>
@@ -292,7 +266,6 @@
                             Богд Хааны  Ордон музей  11 дүгээр сарын 17-27-ны өдрүүдэдЧингис хаан Үндэсний музей, Чойжин ламын сүм музей, цуглуулагч Б.Амарсанаатай хамтран “ХОРИН НЭГЭН ДАРА ЭХИЙН ЧУУЛГАН - ӨНДӨР БОГДЫН ӨВ” “ БУР
                           </p>
                         </div>
-                      
                     </li>
                     <li class="column1-content">    
                       <div class="column1-content-imgbox">
@@ -308,21 +281,6 @@
                         </p>
                       </div>
                     
-                    </li>
-                    <li class="column1-content">    
-                    <div class="column1-content-imgbox">
-                      <img src="https://mgl.gogo.mn/newsn/thumbnail/1000/images/c/2023/11/313110-21112023-1700561453-1002113547-burhan.jpg" alt="" class="column1-content-pic">
-              
-                    </div>
-                    <div class="column1-content-banner">
-                      <h3>
-                        Өндөр гэгээний бүтээсэн нандин шүтээнүүдээс бүрдсэн үзэсгэлэнг толилуулж байна
-                      </h3>
-                      <p>
-                        Богд Хааны  Ордон музей  11 дүгээр сарын 17-27-ны өдрүүдэдЧингис хаан Үндэсний музей, Чойжин ламын сүм музей, цуглуулагч Б.Амарсанаатай хамтран “ХОРИН НЭГЭН ДАРА ЭХИЙН ЧУУЛГАН - ӨНДӨР БОГДЫН ӨВ” “ БУР
-                      </p>
-                    </div>
-                  
                     </li>
                     <li class="column1-content">    
                     <div class="column1-content-imgbox">
@@ -718,7 +676,7 @@
       </div>
       <div class="comic-container">
         <div class="comic-header">
-          <a href="https://gogo.mn/media?type=comic" class="comicheader-link">
+          <a href="https://gogo.mn/media?type=comic" class="comic-header-link">
             <img
               src="https://mgl.gogo.mn//newsn/v4/images/comic.9afb6d5b.png"
               alt=""
@@ -896,25 +854,200 @@
       </div>
       <div class="video-container">
         <div class="video-section-header">
+          <a href="
+          " class="video-header-link">
           <img
-            src="https://mgl.gogo.mn//newsn/v4/images/play-btn.12e64771.svg"
-            alt=""
-            class="video-icon"
-          />
-          <div class="video-title">Үзэх</div>
+          src="https://mgl.gogo.mn//newsn/v4/images/play-btn.12e64771.svg"
+          alt=""
+          class="video-icon"
+        />
+        <div class="video-title">Үзэх</div></a>
+          
         </div>
         <div class="video-section-box">
-          <ul class="video-section-grid"></ul>
+          <ul class="video-section-grid">
+            <li class="video-content">
+              <a href="https://gogo.mn/media?id=wqg91&type=live" class="video-link">
+                <img src="https://mgl.gogo.mn/newsn/thumbnail/420/np/2023/10/02/5203357/chuulgan%20baterdene-104606-21322888981.jpeg" alt="" class="video-img">
+                <div class="video-text">УИХ-ын чуулганы үдээс хойших хуралдаан эхэллээ
+                </div>
+              </a>
+              <div class="video-reaction">
+                <div class="share-button">
+                  <img src="" alt="" class="share-icon" />
+                </div>
+                <div class="comment-button">
+                  <img
+                    src="	https://mgl.gogo.mn//newsn/v4/images/comment-light.bd31b019.svg"
+                    alt=""
+                    class="comment-icon"
+                  />
+                </div>
+              </div>
+            </li>
+            <li class="video-content">
+              <a href="https://gogo.mn/media?id=wqg91&type=live" class="video-link">
+                <img src="https://mgl.gogo.mn/newsn/thumbnail/420/np/2023/10/02/5203357/chuulgan%20baterdene-104606-21322888981.jpeg" alt="" class="video-img">
+                <div class="video-text">УИХ-ын чуулганы үдээс хойших хуралдаан эхэллээ
+                </div>
+              </a>
+              <div class="video-reaction">
+                <div class="share-button">
+                  <img src="" alt="" class="share-icon" />
+                </div>
+                <div class="comment-button">
+                  <img
+                    src="	https://mgl.gogo.mn//newsn/v4/images/comment-light.bd31b019.svg"
+                    alt=""
+                    class="comment-icon"
+                  />
+                </div>
+              </div>
+            </li>
+            <li class="video-content">
+              <a href="https://gogo.mn/media?id=wqg91&type=live" class="video-link">
+                <img src="https://mgl.gogo.mn/newsn/thumbnail/420/np/2023/10/02/5203357/chuulgan%20baterdene-104606-21322888981.jpeg" alt="" class="video-img">
+                <div class="video-text">УИХ-ын чуулганы үдээс хойших хуралдаан эхэллээ
+                </div>
+              </a>
+              <div class="video-reaction">
+                <div class="share-button">
+                  <img src="" alt="" class="share-icon" />
+                </div>
+                <div class="comment-button">
+                  <img
+                    src="	https://mgl.gogo.mn//newsn/v4/images/comment-light.bd31b019.svg"
+                    alt=""
+                    class="comment-icon"
+                  />
+                </div>
+              </div>
+            </li>
+            <li class="video-content">
+              <a href="https://gogo.mn/media?id=wqg91&type=live" class="video-link">
+                <img src="https://mgl.gogo.mn/newsn/thumbnail/420/np/2023/10/02/5203357/chuulgan%20baterdene-104606-21322888981.jpeg" alt="" class="video-img">
+                <div class="video-text">УИХ-ын чуулганы үдээс хойших хуралдаан эхэллээ
+                </div>
+              </a>
+              <div class="video-reaction">
+                <div class="share-button">
+                  <img src="" alt="" class="share-icon" />
+                </div>
+                <div class="comment-button">
+                  <img
+                    src="	https://mgl.gogo.mn//newsn/v4/images/comment-light.bd31b019.svg"
+                    alt=""
+                    class="comment-icon"
+                  />
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
         <div class="pic-section-box">
-          <ul class="pic-section-grid"></ul>
+          <ul class="pic-section-grid">
+            <li class="pic-content">
+              <a href="https://gogo.mn/media?id=wqg91&type=live" class="pic-link">
+                <img src="https://mgl.gogo.mn/newsn/thumbnail/420/images/c/2023/10/312071-24102023-1698114185-856893038-20231022-DSC01583-21.jpg" alt="" class="pic-img">
+                <div class="pic-text">
+                  ФОТО: Дэлхийн энергийн төв гэгдэх Дэмчогийн хийд            
+                </div>
+              </a>
+              <div class="pic-reaction">
+                <div class="share-button">
+                  <img src="" alt="" class="share-icon" />
+                </div>
+                <div class="comment-button">
+                  <img
+                    src="	https://mgl.gogo.mn//newsn/v4/images/comment-light.bd31b019.svg"
+                    alt=""
+                    class="comment-icon"
+                  />
+                </div>
+              </div>
+              </li>
+              <li class="pic-content">
+                <a href="https://gogo.mn/media?id=wqg91&type=live" class="pic-link">
+                  <img src="https://mgl.gogo.mn/newsn/thumbnail/420/images/c/2023/10/312071-24102023-1698114185-856893038-20231022-DSC01583-21.jpg" alt="" class="pic-img">
+                  <div class="pic-text">
+                    ФОТО: Дэлхийн энергийн төв гэгдэх Дэмчогийн хийд            
+                  </div>
+                </a>
+                <div class="pic-reaction">
+                  <div class="share-button">
+                    <img src="" alt="" class="share-icon" />
+                  </div>
+                  <div class="comment-button">
+                    <img
+                      src="	https://mgl.gogo.mn//newsn/v4/images/comment-light.bd31b019.svg"
+                      alt=""
+                      class="comment-icon"
+                    />
+                  </div>
+                </div>
+                </li>
+                <li class="pic-content">
+                  <a href="https://gogo.mn/media?id=wqg91&type=live" class="pic-link">
+                    <img src="https://mgl.gogo.mn/newsn/thumbnail/420/images/c/2023/10/312071-24102023-1698114185-856893038-20231022-DSC01583-21.jpg" alt="" class="pic-img">
+                    <div class="pic-text">
+                      ФОТО: Дэлхийн энергийн төв гэгдэх Дэмчогийн хийд            
+                    </div>
+                  </a>
+                  <div class="pic-reaction">
+                    <div class="share-button">
+                      <img src="" alt="" class="share-icon" />
+                    </div>
+                    <div class="comment-button">
+                      <img
+                        src="	https://mgl.gogo.mn//newsn/v4/images/comment-light.bd31b019.svg"
+                        alt=""
+                        class="comment-icon"
+                      />
+                    </div>
+                  </div>
+                  </li>
+                  <li class="pic-content">
+                    <a href="https://gogo.mn/media?id=wqg91&type=live" class="pic-link">
+                      <img src="https://mgl.gogo.mn/newsn/thumbnail/420/images/c/2023/10/312071-24102023-1698114185-856893038-20231022-DSC01583-21.jpg" alt="" class="pic-img">
+                      <div class="pic-text">
+                        ФОТО: Дэлхийн энергийн төв гэгдэх Дэмчогийн хийд            
+                      </div>
+                    </a>
+                    <div class="pic-reaction">
+                      <div class="share-button">
+                        <img src="" alt="" class="share-icon" />
+                      </div>
+                      <div class="comment-button">
+                        <img
+                          src="	https://mgl.gogo.mn//newsn/v4/images/comment-light.bd31b019.svg"
+                          alt=""
+                          class="comment-icon"
+                        />
+                      </div>
+                    </div>
+                    </li>
+            
+                
+          </ul>
         </div>
       </div>
       <div class="footer">
-        <div class="gogo-logo">
-          <img src="" alt="" class="" />
+        <div class="left">
+          <img
+            src="https://mgl.gogo.mn/newsn/v4/images/gogo-logo.345096b3.png"
+            alt=""
+            class="gogo-logo"
+          />
+            <ul class="extra-link">
+              <li class="weather"> Бидний тухай</li>
+              <li class="horoscope">Сурталчилгаа байршуулах<li>
+              <li class="exchange">Редакцийн ёс зүй</li>
+              <li class="exchange">Нууцлалын бодлого</li>
+              <li class="exchange">Холбоо барих</li>
+            </ul>
         </div>
       </div>
+      </div> 
   </div>
    
   </body>

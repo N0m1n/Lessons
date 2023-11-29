@@ -1,7 +1,12 @@
-.container {
-  margin-left: 678px;
-  margin-right: 678px;
+.container-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+.ontainer-max-width {
+  max-width: 1100px;
+}
+
 .navbar {
   margin-top: 20px;
   display: flex;
@@ -16,8 +21,6 @@
 }
 
 .menu-container {
-  width: 556px;
-
   margin-left: 20px;
 }
 .menu {
@@ -45,7 +48,7 @@ ul * {
   overflow: hidden;
   list-style-type: none;
 }
-.sunmenu-container {
+.submenu-container {
   padding: 15px 25px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 5px 22px rgba(0, 0, 0, 0.15);
@@ -89,6 +92,11 @@ ul * {
   border-radius: 20px;
   color: #fff;
 }
+.content-title,
+.news-item1 {
+  text-decoration: none;
+  color: black;
+}
 .content-img1 {
   width: 477px;
   height: 385px;
@@ -110,7 +118,7 @@ ul * {
   overflow: visible;
 }
 
-.small-box-content {
+.smallbox-news-container {
   background: linear-gradient(
     90deg,
     #f4f4f4 7%,
@@ -119,18 +127,20 @@ ul * {
   border-radius: 10px;
   /* background: rgba(192, 223, 255, 0.5411764705882353); */
   margin-top: 50px;
+}
+.smallbox-news-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
 }
-.small-content-img {
-  width: 231px;
+.smallbox-img {
+  width: 100%;
   border-radius: 5px;
   position: relative;
 }
-.small-box-content-hover {
+/* .small-box-content-hover {
   height: 20px;
-  overflow: visible;
+  overflow: hidden;
   color: black;
   font-size: 20px;
   position: absolute;
@@ -140,14 +150,14 @@ ul * {
 .small-box-content-hover:hover {
   overflow: visible;
 }
-
-.small-content-text {
+*/
+.smallbox-news-link {
   text-decoration: none;
+  color: black;
 }
-.highlight-banner {
+.smallbox-banner {
+  background-image: url(https://bn.gogo.mn/news-b2/263/270/bn.html);
   border: 1px dotted black;
-  width: 231px;
-  height: 237px;
 }
 .story-container {
   margin-top: 40px;
@@ -242,14 +252,20 @@ ul * {
   flex-direction: column;
   justify-content: center;
 }
+.column1-text {
+  margin-top: 40px;
+}
 .column1-content-pic {
-  width: 210px;
-  height: 150px;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
 }
 .column1-content {
   display: flex;
   flex-direction: row;
   gap: 30px;
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
 .column1-content-text-title {
   display: flex;
@@ -257,9 +273,13 @@ ul * {
 }
 h3 {
   font-size: 19px;
-  font-weight: 700;
   font-style: bold;
   text-decoration: none;
+  margin-top: 0px;
+}
+p {
+  font-size: 15px;
+  margin: 10px 0px;
 }
 .continue-button-box {
   margin-top: 20px;
@@ -283,7 +303,7 @@ h3 {
   margin-top: 20px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 10px;
 }
 .tree,
@@ -295,6 +315,7 @@ h3 {
   width: 290px;
   height: 170px;
   overflow: auto;
+  border-radius: 5px;
 }
 .trend-news-container {
   margin-top: 50px;
@@ -336,7 +357,9 @@ h3 {
   padding: 0px, 40px;
 }
 .interview-header-link,
-.tech-header-link {
+.tech-header-link,
+.comic-header-link,
+.video-header-link {
   display: flex;
   justify-content: flex-start;
   gap: 10px;
@@ -345,7 +368,8 @@ h3 {
   color: black;
 }
 .mic,
-.tech {
+.tech,
+.turtle {
   padding-top: 20px;
   width: 20px;
   height: 25px;
@@ -408,7 +432,6 @@ h3 {
   margin-top: 60px;
 }
 .comic-section-box {
-  width: 1100px;
   overflow: hidden;
 }
 .comic-section-grid {
@@ -436,9 +459,71 @@ h3 {
   background-color: #1a1a1a;
 }
 
+.video-section-grid,
+.pic-section-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  text-decoration: none;
+}
+.video-img,
+.pic-img {
+  width: 90%;
+}
+.video-title {
+  color: white;
+}
+.video-text,
+.pic-text {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+.footer {
+  padding: 50px 0px;
+}
+
 @media only screen and (max-width: 970px) {
-  .container {
-    margin-left: 0px;
-    margin-right: 0px;
+  .container-max-width {
+    max-width: 970px;
+  }
+  .menu-container {
+    height: 10px;
+    overflow: hidden;
+  }
+  .right {
+    position: relative;
+    z-index: 1;
+    margin-left: -1000px;
+  }
+  .home-main-highlight {
+    display: none;
+  }
+  .smallbox-news-container {
+    height: 385px;
+    overflow: hidden;
+  }
+  .smallbox-news-grid {
+    display: block;
+  }
+  .smallbox-news-text {
+    position: relative;
+    z-index: 1;
+  }
+  .story-news:nth-last-child() {
+    display: none;
+    overflow-block: hidden;
+  }
+  .content-body-column1 {
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+  }
+  .column1-date-grid,
+  .content-body-column2 {
+    display: none;
+  }
+  .interview-box-grid {
+    display: flex;
   }
 }
