@@ -52,7 +52,24 @@ console.log(num);
 // }
 // console.log(sum);
 
-var randomNumber = mat.floor(math.random() * 100);
-console.log(randomNumber);
+// var randomNumber = mat.floor(math.random() * 100);
+// console.log(randomNumber);
+//DEC 07
+// **if ashiglah**
 
 let i = 0;
+const arr = [1, 2, 3, 4, 5];
+//debugger
+while (i < arr.length) {
+  if (arr[i] == 5) {
+    console.log("5 bn");
+  }
+  i++;
+}
+
+// let i = 0;
+// const arr = [1, 2, 3];
+// while (i < arr.length) {
+//   console.log(array[i]);
+//   i++;
+// }
