@@ -92,20 +92,83 @@ console.log(
 let person = {
   firstName: " Nomin",
   lastName: "Erdene",
-  printFullname: function () {
-    console.log(this);
-  },
 };
+
+const keys = Object.keys(person);
+console.log(keys);
+
+// garalt [firstName , lastName]
+
+const key = Object.values(person);
+console.log(key);
+
+//garalt ["nomin", "Erdene"]
 
 // console.log(person.age); // tseg ashiglan handah
 // console.log(person["name"]); // [] haalt ashiglan handah
 
-let person1 = {
-  firstname: "naranbayar",
-};
+// let person1 = {
+//   firstname: "naranbayar",
+// };
 
-let person2 = person1;
-person2.firstname = "Erdene";
+// let person2 = person1;
+// person2.firstname = "Erdene";
 
-console.log(person1.firstname);
-console.log(person2.firstname);
+// console.log(person1.firstname);
+// console.log(person2.firstname);
+
+// //spread  operator (...)
+
+// let person2 = { ...person };
+
+//
+let students = [
+  {
+    name: "Sambuu",
+    birthDate: 2005,
+    single: true,
+  },
+  {
+    name: "Bayaraa",
+    birthDate: 2002,
+    single: true,
+  },
+  {
+    name: "Duluu",
+    birthDate: 1990,
+    single: false,
+  },
+  {
+    name: "Nasaa",
+    birthDate: 1996,
+    single: false,
+  },
+  {
+    name: "Naraa",
+    birthDate: 1989,
+    single: false,
+  },
+  {
+    name: "turuu",
+    birthDate: 1998,
+    single: true,
+  },
+  {
+    name: "tulgaa",
+    birthDate: 2001,
+    single: true,
+  },
+  {
+    name: "Erdene",
+    birthDate: 2002,
+    single: true,
+  },
+  {
+    name: "Od",
+    birthDate: 1994,
+    single: false,
+  },
+];
+function olderStudent() {
+  console.log(students.find((students) => students.birthDate >= 2000));
+}
