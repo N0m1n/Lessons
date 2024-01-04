@@ -36,6 +36,8 @@ const firstLetterToUpperCase = (str) => {
   return str.slice(0, 1).toUpperCase();
 };
 
+console.log(firstLetterToUpperCase);
+
 const firstNameToUpperCase = (str) => {
   const firstStr = firstLetterToUpperCase(str);
   const lastStr = str.slice(1, str.length);
@@ -89,18 +91,18 @@ console.log(
 
 //{key: value}
 
-let person = {
-  firstName: " Nomin",
-  lastName: "Erdene",
-};
+// let person = {
+//   firstName: " Nomin",
+//   lastName: "Erdene",
+// };
 
-const keys = Object.keys(person);
-console.log(keys);
+// const keys = Object.keys(person);
+// console.log(keys);
 
-// garalt [firstName , lastName]
+// // garalt [firstName , lastName]
 
-const key = Object.values(person);
-console.log(key);
+// const key = Object.values(person);
+// console.log(key);
 
 //garalt ["nomin", "Erdene"]
 
@@ -122,53 +124,53 @@ console.log(key);
 // let person2 = { ...person };
 
 //
-let students = [
-  {
-    name: "Sambuu",
-    birthDate: 2005,
-    single: true,
-  },
-  {
-    name: "Bayaraa",
-    birthDate: 2002,
-    single: true,
-  },
-  {
-    name: "Duluu",
-    birthDate: 1990,
-    single: false,
-  },
-  {
-    name: "Nasaa",
-    birthDate: 1996,
-    single: false,
-  },
-  {
-    name: "Naraa",
-    birthDate: 1989,
-    single: false,
-  },
-  {
-    name: "turuu",
-    birthDate: 1998,
-    single: true,
-  },
-  {
-    name: "tulgaa",
-    birthDate: 2001,
-    single: true,
-  },
-  {
-    name: "Erdene",
-    birthDate: 2002,
-    single: true,
-  },
-  {
-    name: "Od",
-    birthDate: 1994,
-    single: false,
-  },
-];
-function olderStudent() {
-  console.log(students.find((students) => students.birthDate >= 2000));
-}
+// let students = [
+//   {
+//     name: "Sambuu",
+//     birthDate: 2005,
+//     single: true,
+//   },
+//   {
+//     name: "Bayaraa",
+//     birthDate: 2002,
+//     single: true,
+//   },
+//   {
+//     name: "Duluu",
+//     birthDate: 1990,
+//     single: false,
+//   },
+//   {
+//     name: "Nasaa",
+//     birthDate: 1996,
+//     single: false,
+//   },
+//   {
+//     name: "Naraa",
+//     birthDate: 1989,
+//     single: false,
+//   },
+//   {
+//     name: "turuu",
+//     birthDate: 1998,
+//     single: true,
+//   },
+//   {
+//     name: "tulgaa",
+//     birthDate: 2001,
+//     single: true,
+//   },
+//   {
+//     name: "Erdene",
+//     birthDate: 2002,
+//     single: true,
+//   },
+//   {
+//     name: "Od",
+//     birthDate: 1994,
+//     single: false,
+//   },
+// ];
+// function olderStudent() {
+//   console.log(students.find((students) => students.birthDate >= 2000));
+// }

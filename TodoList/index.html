@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ToDoList -->
+    <!-- draggable => zuuhud ashiglah -->
+    <div class="container">
+      <div class="boards-box center">
+        <!-- Todocontainer ehleh -->
+        <div
+          class="box-grey center gap"
+          id="todo-greybox"
+          ondragover="allowDrop(event)"
+          ondrop="drop(event)"
+        >
+          <div class="title-bar center">
+            <h1 class="title">To do</h1>
+            <div class="task-number">1</div>
+          </div>
+          <div
+            class="drag-box gap"
+            id="todo-whiteboard"
+            draggable="true"
+            ondragstart="drag(event)"
+          >
+            <div class="white-board center"></div>
+          </div>
+
+          <div class="add-box padding center">
+            <div class="plus-icon">+</div>
+            <button onclick="show()" id="add-todo-button">Add Card</button>
+          </div>
+        </div>
+
+        <!-- In progress container ehleh -->
+        <div
+          class="box-grey center gap"
+          id="ip-greybox"
+          ondragover="allowDrop(event)"
+          ondrop="drop(event)"
+        >
+          <div class="title-bar center">
+            <h1 class="title">To do</h1>
+            <div class="task-number">1</div>
+          </div>
+          <div
+            class="drag-box gap"
+            id="ip-whiteboard"
+            draggable="true"
+            ondragstart="drag(event)"
+          >
+            <div class="white-board center"></div>
+          </div>
+
+          <div class="add-box padding center">
+            <div class="plus-icon">+</div>
+            <button onclick="show()" id="add-todo-button">Add Card</button>
+          </div>
+        </div>
+
+        <!-- Stuck container ehleh -->
+        <div
+          class="box-grey center gap"
+          id="stuck-greybox"
+          ondragover="allowDrop(event)"
+          ondrop="drop(event)"
+        >
+          <div class="title-bar center">
+            <h1 class="title">Stuck</h1>
+            <div class="task-number">1</div>
+          </div>
+          <div
+            class="drag-box gap"
+            id="stuck-whiteboard"
+            draggable="true"
+            ondragstart="drag(event)"
+          >
+            <div class="white-board center"></div>
+          </div>
+
+          <div class="add-box padding center">
+            <div class="plus-icon">+</div>
+            <button onclick="show()" id="add-todo-button">Add Card</button>
+          </div>
+        </div>
+        <!-- Done container ehleh -->
+        <div
+          class="box-grey center gap"
+          id="done-greybox"
+          ondragover="allowDrop(event)"
+          ondrop="drop(event)"
+        >
+          <div class="title-bar center">
+            <h1 class="title">Completed</h1>
+            <div class="task-number">1</div>
+          </div>
+          <div
+            class="drag-box gap"
+            id="done-whiteboard"
+            draggable="true"
+            ondragstart="drag(event)"
+          >
+            <div class="white-board center"></div>
+          </div>
+
+          <div class="add-box padding center">
+            <div class="plus-icon">+</div>
+            <button onclick="show()" id="add-todo-button">Add Card</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--  modal Add task window start here -->
+
+    <div class="add-task-window">
+      <div class="add-task">
+        <h2 class="add-task-title">Add task</h2>
+
+        <p class="title">Title</p>
+        <input type="text" id="title-input" />
+        <p class="description">Description</p>
+        <textarea name="" id="description-input" cols="30" rows="10"></textarea>
+        <p class="status">Status</p>
+        <select name="" id="status-input">
+          <option value="To do">To do</option>
+          <option value="In progress">In progress</option>
+          <option value="Stuck">Stuck</option>
+          <option value="Done">Done</option>
+        </select>
+        <p class="priority">Priority</p>
+
+        <select name="" id="priority-input">
+          <option value="High">High</option>
+          <option value="Medium">Medium</option>
+          <option value="Low">Low</option>
+        </select>
+
+        <button onclick="addTodo()">Submit</button>
+      </div>
+    </div>
+  </body>
+  <script src="./index.js"></script>
+</html>

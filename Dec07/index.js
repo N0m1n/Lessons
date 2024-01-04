@@ -60,7 +60,8 @@ console.log(a);
 for (let N = 1; N <= 7; N++) {
   console.log("*".repeat(N));
 }
-for (let n = 0; n <= 5; n++)
+for (let n = 0; n <= 5; n++) {
   for (let s = 4; s >= 0; s--) {
     console.log(" ".repeat(s) + "*".repeat(n));
   }
+}
