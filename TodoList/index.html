@@ -13,17 +13,17 @@
       <div class="boards-box center">
         <!-- Todocontainer ehleh -->
         <div
-          class="box-grey center gap"
+          class="box-grey center "
           id="todo-greybox"
           ondragover="allowDrop(event)"
           ondrop="drop(event)"
         >
           <div class="title-bar center">
             <h1 class="title">To do</h1>
-            <div class="task-number">1</div>
+            <div class="todo-task-number"></div>
           </div>
           <div
-            class="drag-box gap"
+            class="drag-box"
             id="todo-whiteboard"
             draggable="true"
             ondragstart="drag(event)"
@@ -31,9 +31,9 @@
             <div class="white-board center"></div>
           </div>
 
-          <div class="add-box padding center">
+          <div class="add-box padding flex">
             <div class="plus-icon">+</div>
-            <button onclick="show()" id="add-todo-button">Add Card</button>
+            <div onclick="show()" id="add-todo-button">Add Card</div>
           </div>
         </div>
 
@@ -45,8 +45,8 @@
           ondrop="drop(event)"
         >
           <div class="title-bar center">
-            <h1 class="title">To do</h1>
-            <div class="task-number">1</div>
+            <h1 class="title">In Progress</h1>
+            <div class="ip-task-number"></div>
           </div>
           <div
             class="drag-box gap"
@@ -57,9 +57,9 @@
             <div class="white-board center"></div>
           </div>
 
-          <div class="add-box padding center">
+          <div class="add-box padding flex">
             <div class="plus-icon">+</div>
-            <button onclick="show()" id="add-todo-button">Add Card</button>
+            <div onclick="show()" id="add-todo-button">Add Card</div>
           </div>
         </div>
 
@@ -72,7 +72,7 @@
         >
           <div class="title-bar center">
             <h1 class="title">Stuck</h1>
-            <div class="task-number">1</div>
+            <div class="stuck-task-number"></div>
           </div>
           <div
             class="drag-box gap"
@@ -83,9 +83,9 @@
             <div class="white-board center"></div>
           </div>
 
-          <div class="add-box padding center">
+          <div class="add-box padding flex">
             <div class="plus-icon">+</div>
-            <button onclick="show()" id="add-todo-button">Add Card</button>
+            <div onclick="show()" id="add-todo-button">Add Card</div>
           </div>
         </div>
         <!-- Done container ehleh -->
@@ -97,7 +97,7 @@
         >
           <div class="title-bar center">
             <h1 class="title">Completed</h1>
-            <div class="task-number">1</div>
+            <div class="done-task-number"></div>
           </div>
           <div
             class="drag-box gap"
@@ -108,9 +108,9 @@
             <div class="white-board center"></div>
           </div>
 
-          <div class="add-box padding center">
+          <div class="add-box padding  flex">
             <div class="plus-icon">+</div>
-            <button onclick="show()" id="add-todo-button">Add Card</button>
+            <div onclick="show()" id="add-todo-button">Add Card</div>
           </div>
         </div>
       </div>
@@ -129,7 +129,7 @@
         <p class="status">Status</p>
         <select name="" id="status-input">
           <option value="To do">To do</option>
-          <option value="In progress">In progress</option>
+          <option value="In Progress">In progress</option>
           <option value="Stuck">Stuck</option>
           <option value="Done">Done</option>
         </select>
@@ -141,7 +141,7 @@
           <option value="Low">Low</option>
         </select>
 
-        <button onclick="addTodo()">Submit</button>
+        <button onclick="addTodo(), hide ()">Add Task</button>
       </div>
     </div>
   </body>
