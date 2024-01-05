@@ -15,19 +15,24 @@
 // }
 // console.log(str);
 
-function allowDrop(event) {
-  event.preventDefault();
-}
+// const render = () => {
+//   let boxString = "";
+//   boxArray.forEach((el, i) => {
+//     boxString += `<div ondragstart="drag(event)" class="box white-board gap" dragabble="true" id="box-${el.title + i}">
 
-function drag(event) {
+const allowDrop=(event) =>{
+  event.preventDefault();
+};
+
+const drag= (event) =>{
   event.dataTransfer.setData("text", event.target.id);
-}
+};
 
 function drop(event) {
   event.preventDefault();
   const boxId = event.dataTransfer.getData("text");
   event.target.appendChild(document.getElementById(boxId));
-}
+};
 
 // show function
 // array
@@ -36,7 +41,7 @@ const boxArray = [
   {
     title: "Read book",
     Description: " 30 minutes reading ",
-    Status: "",
+    Status: "To do",
     Priority: "Low",
   },
 ];
@@ -44,17 +49,32 @@ const boxArray = [
 // render => array dahi el-d-g niiluulj box bolgood white board -d hiih
 
 const render = () => {
-  let boxString = "";
-  boxArray.forEach((el, i) => {
-    boxString += `<div ondragstart="drag(event)" class="box white-board gap" dragabble="true" i
-d="box-${el.title + i}">
+  let todoContainerElements = "";
+  let doneContainerElements = "";
+  let ipContainerElements = "";
+  let stuckContainerElements = "";
+
+  // let todo = [];
+  // let inProgress = [];
+  // let stuck = [];
+  // let done = [];
+
+
+  const filteredTodo = boxArray.filter((el, i) => el.Status === "To do");
+  const filteredDone = boxArray.filter((el, i) => el.Status === "Done");
+  const filteredIp = boxArray.filter((el, i) => el.Status === "In Progress");
+  const filteredStuck = boxArray.filter((el, i) => el.Status === "Stuck");
+
+  filteredTodo.forEach((el, i) => {
+    todoContainerElements += `<div ondragstart="drag(event)" class="box white-board gap" draggable="true" id="${el.id}">
+
 <div class="task-icon circle">
 <img src="./completed.png" alt="" />
 </div>
 <ul class="">
   <li class="h3" >${el.title}</li>
   <li class="margin-16 ">${el.Description}</li>
-  <li class="">${el.Status}</li>
+  <li class=" none ">${el.Status}</li>
   <li class="priority-box center ">${el.Priority}</li>
 </ul>
 <div class="action-buttons">
@@ -69,18 +89,104 @@ d="box-${el.title + i}">
 </div>
 `;
   });
-  if (document.getElementById("status-input").value === "Stuck") {
-    document.getElementById("stuck-whiteboard").innerHTML = boxString; //appendchild bolgoh
-  } else if (document.getElementById("status-input").value === "To do") {
-    document.getElementById("todo-whiteboard").innerHTML = boxString;
-  } else if (document.getElementById("status-input").value === "In progress") {
-    document.getElementById("ip-whiteboard").innerHTML = boxString;
-  } else if (document.getElementById("status-input").value === "Done") {
-    document.getElementById("done-whiteboard").innerHTML = boxString;
-  }
+
+  filteredDone.forEach((el, i) => {
+    doneContainerElements += `<div ondragstart="drag(event)" class="box white-board gap" draggable="true" id="${el.id}">
+
+<div class="task-icon circle">
+<img src="./completed.png" alt="" />
+</div>
+<ul class="">
+  <li class="h3" >${el.title}</li>
+  <li class="margin-16 ">${el.Description}</li>
+  <li class="none">${el.Status}</li>
+  <li class="priority-box  center ">${el.Priority}</li>
+</ul>
+<div class="action-buttons">
+<div class="remove circle">
+  <img src="./x.png" alt="" />
+</div>
+<div class="edit circle">
+  <img src="./editicon.png" alt="" />
+</div>
+</div>
+
+</div>
+`;
+  });
+
+  filteredIp.forEach((el, i) => {
+    ipContainerElements += `<div ondragstart="drag(event)" class="box white-board gap" draggable="true" id="${el.id}">
+
+<div class="task-icon circle">
+<img src="./completed.png" alt="" />
+</div>
+<ul class="">
+  <li class="h3" >${el.title}</li>
+  <li class="margin-16 ">${el.Description}</li>
+  <li class="none ">${el.Status}</li>
+  <li class="priority-box  center ">${el.Priority}</li>
+</ul>
+<div class="action-buttons">
+<div class="remove circle">
+  <img src="./x.png" alt="" />
+</div>
+<div class="edit circle">
+  <img src="./editicon.png" alt="" />
+</div>
+</div>
+
+</div>
+`;
+  });
+
+  filteredStuck.forEach((el, i) => {
+    stuckContainerElements += `<div ondragstart="drag(event)" class="box white-board gap" draggable="true" id="${el.id}">
+
+<div class="task-icon circle">
+<img src="./completed.png" alt="" />
+</div>
+<ul class="">
+  <li class="h3" >${el.title}</li>
+  <li class="margin-16 ">${el.Description}</li>
+  <li class="none">${el.Status}</li>
+  <li class="priority-box center ">${el.Priority}</li>
+</ul>
+<div class="action-buttons">
+<div class="remove circle">
+// <div class="done" onclick="remove('${el.id}')">
+  <img src="./x.png" alt="" />
+</div>
+<div class="edit circle">
+  <img src="./editicon.png" alt="" />
+</div>
+</div>
+
+</div>
+`;
+  });
+
+
+  document.getElementById("todo-whiteboard").innerHTML = todoContainerElements;
+  // document.querySelector("todo-task-number").innerHTML =todo.length;
+  // // let x = todoContainerElements.child.length;
+  // // console.log(x);
+  // let num = document.getElementById("todo-greybox").childElementCount - 1;
+  // console.log(num);
+  document.getElementById("done-whiteboard").innerHTML = doneContainerElements;
+  document.getElementById("ip-whiteboard").innerHTML = ipContainerElements;
+  document.getElementById("stuck-whiteboard").innerHTML =
+    stuckContainerElements;
 };
 render();
 // filter uusgeh
+
+const emptyModal = ()=> {
+
+  document.getElementById("title-input").value=""; 
+  document.getElementById("description-input").value="";
+
+};
 
 console.log(render);
 
@@ -98,6 +204,7 @@ const addTodo = () => {
   };
   boxArray.push(inputObj);
   render();
+  emptyModal();
 };
 
 const show = () => {
@@ -121,3 +228,33 @@ window.onclick = function (event) {
     modalContainer.classList.remove("show");
   }
 };
+
+// count status
+// const counterStatus = (array) => {
+//   let obj = {};
+//   array.forEach((el) => {
+//     if (obj[el.Status]) {
+//       obj[el.Status]++;
+//     } else {
+//       obj[el.Status] = 1;
+//     }
+//   });
+//   return obj;
+// };
+// console.log(counterStatus(boxArray));
+// x-leh
+
+// const removeX = () => {
+//   document.getElementsByClassName("remove circle");
+//   onclick;
+// };
+
+// let numb = document.getElementById("ip-greybox").childElementCount;
+
+// console.log(numb - 1);
+
+// const counterStatus = () => {
+//   let counter = "";
+
+//   array.forEach((el, i) => {});
+// };
